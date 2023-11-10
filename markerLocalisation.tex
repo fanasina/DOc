@@ -1,0 +1,31 @@
+\documentclass[a4paper,11pt]{article}
+
+
+\usepackage{tikz}
+\newcommand{\mapMarkerScale}[1]{%
+\begin{tikzpicture}[#1]%
+ %\draw ([shift={(initAngle:radius)}]centerX,centerY) arc (initAngle:finalAngle:radius);
+ \draw ([shift={(-30:0.5ex)}]0ex,1ex) arc (-30:210:0.5ex);
+ \draw (0,0) -- (0.435ex,0.75ex);
+  \draw (0,0) -- (-0.435ex,0.75ex);
+  \draw[fill] (0ex,1ex) circle (0.15ex);
+\end{tikzpicture}%
+}
+
+\newcommand{\mapMarker}{%
+    \mapMarkerScale{scale=1.5}
+}
+
+\begin{document}
+
+\mapMarker
+
+\vspace{1cm}
+\mapMarkerScale{scale=2.5}
+
+\vspace{1cm}
+\mapMarkerScale{scale=5}
+
+\vspace{1cm}
+\mapMarkerScale{scale=7}
+\end{document}
